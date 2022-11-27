@@ -1,26 +1,32 @@
 import string
 import random
 
-# To get the alpahabets in lower case
-lower_case = string.ascii_lowercase
 
-# To get the alpahabets in upper case
-upper_case = string.ascii_uppercase
+def password_gen():
+    # To get the alphabets in lower case
+    lower_case = string.ascii_lowercase
 
-# To get the number 0 to 9
-digits = string.digits
+    # To get the alphabets in upper case
+    upper_case = string.ascii_uppercase
 
-# To get all the symbols
-symbols = string.punctuation
+    # To get the number 0 to 9
+    digits = string.digits
 
-# To concatenate the lowercase alphabets, uppercase alphabets, digits and symbols
-big_string = lower_case+upper_case+digits+symbols
+    # To get all the symbols
+    symbols = string.punctuation
 
-# pick up 8 characters randomly from the concatenated value and return it as a list
-ran_pass = random.sample(big_string, 8)
+    # To concatenate the lowercase alphabets, uppercase alphabets, digits and symbols
+    big_string = lower_case+upper_case+digits+symbols
 
-# Join all the values in the list to form a string
-password = ''.join(ran_pass)
+    # pick up 8 characters randomly from the concatenated value and return it as a list
+    ran_pass = random.sample(big_string, 8)
 
-# print out the generated password
-print(password)
+    # Join all the values in the list to form a string
+    password = ''.join(ran_pass)
+
+    # print out the generated password
+    print(password)
+
+
+# invoking the function
+password_gen()
